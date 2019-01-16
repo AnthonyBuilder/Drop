@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    background-color: black;
+}
+
+.img-back-splash {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.5;
+    transform: scale(1.2, 1.2);
+    animation-duration: 4.5s;
+    animation-name: fadeAndScaleImg;
+    animation-timing-function: cubic-bezier(0.65, 0.01, 0.14, 0.93);
+    object-fit: cover;  
+}
+
+.img-text-wrapper {
+    width: 600px;
+    height: 260px;
+    z-index: 2;
+    position: absolute;
+    left: 31%;
+    top: 38%;
+    max-width: 100%;
+    /* border: 0; */
+    border-radius: 11px;
+    box-shadow: 0px 0px 6px 0px;
+    object-fit: cover;
+    transition: 600ms;
+    animation-duration: 4s;
+    animation-name: fadeAndScale;
+    animation-timing-function: cubic-bezier(0.65, 0.01, 0.14, 0.93) ;
+    /* background-color: black; */
+
+}
+    
+
+
+.splash {
+    z-index: 0;
+}
+
+.title {
+    position: absolute;
+    left: 37%;
+    top: 38%;
+    font-size: 180px;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    z-index: 3;
+    animation-duration: 3s;
+    animation-name: fadeAndScale;
+    text-shadow: 0 0 70px black;
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+@keyframes fadeAndScale {
+    from {
+        opacity: 0;
+        transform: scale(.5, .5);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+
+}
+
+@keyframes fadeAndScaleImg {
+    from {
+        opacity: 0;
+        transform: scale(1, 1);
+    }
+    to {
+        opacity: 0.5;
+        transform: scale(1.2, 1.2);
+    }
+}
+
+@keyframes fadeOutScale {
+    from {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(.5, .5);
+    }
+}
